@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.0;
+
+contract EtherValueConvert {
+    uint256 public weiValue;
+    uint256 public etherValue;
+    uint256 public gweiValue;
+
+    function receiveEther() external payable {
+        weiValue = msg.value;
+        etherValue = weiValue / 2 ether;
+        gweiValue = weiValue / 2 gwei;
+    }
+}
